@@ -1,0 +1,676 @@
+<!DOCTYPE html>
+<html dir="rtl" lang="ar">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EKI Styles - مكتبة CSS عربية متكاملة</title>
+    <link rel="stylesheet" href="dist/ekistyles.min.css">
+    <style>
+        /* أنماط إضافية للعرض التوضيحي */
+        .demo-section {
+            margin-bottom: 4rem;
+            padding: 2rem;
+            border-radius: 1rem;
+            background-color: var(--color-surface);
+            border: 1px solid var(--color-border);
+        }
+
+        .demo-section h2 {
+            margin-bottom: 1.5rem;
+            padding-bottom: 1rem;
+            border-bottom: 2px solid var(--color-accent);
+        }
+
+        .demo-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .demo-item {
+            padding: 1rem;
+            background: rgba(3, 218, 197, 0.05);
+            border-radius: 0.75rem;
+            border-right: 3px solid var(--color-accent);
+        }
+
+        .color-box {
+            width: 100%;
+            height: 100px;
+            border-radius: 0.5rem;
+            margin-bottom: 0.5rem;
+            display: flex;
+            align-items: flex-end;
+            justify-content: center;
+            padding: 0.5rem;
+            color: white;
+            font-weight: 600;
+            font-size: 0.875rem;
+        }
+
+        .hero {
+            background: linear-gradient(135deg, var(--color-accent-alt) 0%, var(--color-accent) 100%);
+            padding: 4rem 2rem;
+            border-radius: 1.5rem;
+            text-align: center;
+            color: white;
+            margin-bottom: 3rem;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            color: white;
+            margin-bottom: 1rem;
+        }
+
+        .hero p {
+            font-size: 1.25rem;
+            margin-bottom: 2rem;
+        }
+
+        .button-group {
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin-bottom: 1.5rem;
+        }
+
+        .feature-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .feature-card {
+            text-align: center;
+            padding: 1.5rem;
+        }
+
+        .feature-card h3 {
+            margin-bottom: 0.5rem;
+        }
+
+        .feature-icon {
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .code-block {
+            background-color: #1a0033;
+            color: #03dac5;
+            padding: 1rem;
+            border-radius: 0.5rem;
+            overflow-x: auto;
+            margin: 1rem 0;
+            font-family: 'Courier New', monospace;
+            direction: ltr;
+            text-align: left;
+            font-size: 0.875rem;
+        }
+
+        .comparison-table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        .comparison-table th {
+            background-color: var(--color-accent-alt);
+            color: white;
+            padding: 1rem;
+            text-align: right;
+            direction: rtl;
+        }
+
+        .comparison-table td {
+            padding: 1rem;
+            border-bottom: 1px solid var(--color-border);
+            direction: rtl;
+            text-align: right;
+        }
+
+        .comparison-table tr:hover {
+            background-color: rgba(98, 0, 238, 0.05);
+        }
+
+        .stats {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 1.5rem;
+            margin: 2rem 0;
+            text-align: center;
+        }
+
+        .stat-item {
+            padding: 1.5rem;
+            background: rgba(3, 218, 197, 0.1);
+            border-radius: 0.75rem;
+            border: 1px solid var(--color-accent);
+        }
+
+        .stat-number {
+            font-size: 2rem;
+            font-weight: 700;
+            color: var(--color-accent);
+            margin-bottom: 0.5rem;
+        }
+
+        .stat-label {
+            font-size: 0.875rem;
+            color: var(--color-text);
+        }
+
+        @media (max-width: 768px) {
+            .hero {
+                padding: 2rem 1rem;
+            }
+
+            .hero h1 {
+                font-size: 2rem;
+            }
+
+            .button-group {
+                flex-direction: column;
+            }
+
+            .button-group .btn {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- الشريط العلوي -->
+    <nav class="navbar">
+        <a href="#" class="navbar-brand">🎨 EKI Styles</a>
+        <ul class="navbar-menu">
+            <li><a href="#features" class="active">المميزات</a></li>
+            <li><a href="#components" class="active">المكونات</a></li>
+            <li><a href="#colors" class="active">الألوان</a></li>
+            <li><a href="#typography" class="active">الطباعة</a></li>
+        </ul>
+        <div class="navbar-right">
+            <button class="btn btn-secondary btn-sm">توثيق كامل</button>
+        </div>
+    </nav>
+
+    <div class="container-lg">
+        <!-- البطل (Hero) -->
+        <section class="hero">
+            <h1>🎨 EKI Styles</h1>
+            <p>مكتبة CSS عربية متكاملة مع دعم كامل للعربية وألوان Material Purple</p>
+            <div class="button-group">
+                <button class="btn btn-primary">ابدأ الآن</button>
+                <button class="btn btn-secondary">اعرف المزيد</button>
+            </div>
+        </section>
+
+        <!-- المميزات -->
+        <section id="features" class="demo-section">
+            <h2>✨ المميزات الرئيسية</h2>
+            <div class="feature-grid">
+                <div class="feature-card card">
+                    <div class="feature-icon">🌍</div>
+                    <h3>دعم عربي كامل</h3>
+                    <p>اتجاه RTL متكامل وخط Tajawal احترافي</p>
+                </div>
+                <div class="feature-card card">
+                    <div class="feature-icon">🎭</div>
+                    <h3>تصميم حديث</h3>
+                    <p>ألوان Material Purple وأنماط معاصرة</p>
+                </div>
+                <div class="feature-card card">
+                    <div class="feature-icon">📱</div>
+                    <h3>مستجيب بالكامل</h3>
+                    <p>تصميم mobile-first لجميع الشاشات</p>
+                </div>
+                <div class="feature-card card">
+                    <div class="feature-icon">⚡</div>
+                    <h3>الأداء العالي</h3>
+                    <p>حجم صغير ومحسن تماماً</p>
+                </div>
+                <div class="feature-card card">
+                    <div class="feature-icon">🛠️</div>
+                    <h3>سهل التخصيص</h3>
+                    <p>متغيرات CSS وإعدادات مرنة</p>
+                </div>
+                <div class="feature-card card">
+                    <div class="feature-icon">📦</div>
+                    <h3>مكونات جاهزة</h3>
+                    <p>أزرار وبطاقات وأشكال وأكثر</p>
+                </div>
+            </div>
+
+            <!-- الإحصائيات -->
+            <div class="stats">
+                <div class="stat-item">
+                    <div class="stat-number">15+</div>
+                    <div class="stat-label">مكونات جاهزة</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">50+</div>
+                    <div class="stat-label">فئة مساعدة</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">10</div>
+                    <div class="stat-label">ألوان أساسية</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">100%</div>
+                    <div class="stat-label">عربي</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- المكونات -->
+        <section id="components" class="demo-section">
+            <h2>🧩 أمثلة على المكونات</h2>
+
+            <!-- الأزرار -->
+            <h3>الأزرار (Buttons)</h3>
+            <div class="button-group">
+                <button class="btn btn-primary">أساسي</button>
+                <button class="btn btn-secondary">ثانوي</button>
+                <button class="btn btn-success">نجاح</button>
+                <button class="btn btn-warning">تحذير</button>
+                <button class="btn btn-error">خطأ</button>
+            </div>
+
+            <h4 style="margin-top: 1.5rem;">أحجام مختلفة</h4>
+            <div class="button-group">
+                <button class="btn btn-primary btn-sm">صغير</button>
+                <button class="btn btn-primary">عادي</button>
+                <button class="btn btn-primary btn-lg">كبير</button>
+                <button class="btn btn-primary btn-block">عرض كامل</button>
+            </div>
+
+            <!-- البطاقات -->
+            <h3 style="margin-top: 2rem;">البطاقات (Cards)</h3>
+            <div class="demo-grid">
+                <div class="card">
+                    <div class="card-header">
+                        <h3>بطاقة 1</h3>
+                    </div>
+                    <div class="card-body">
+                        <p>محتوى البطاقة الأولى مع نص عربي جميل ومُنسّق.</p>
+                    </div>
+                    <div class="card-footer">
+                        <button class="btn btn-primary btn-sm">عمل</button>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-header">
+                        <h3>بطاقة 2</h3>
+                    </div>
+                    <div class="card-body">
+                        <p>محتوى البطاقة الثانية مع نص مرتب وسهل القراءة.</p>
+                    </div>
+                    <div class="card-footer">
+                        <button class="btn btn-secondary btn-sm">عمل</button>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-header">
+                        <h3>بطاقة 3</h3>
+                    </div>
+                    <div class="card-body">
+                        <p>محتوى البطاقة الثالثة مع تصميم عصري ومتجاوب.</p>
+                    </div>
+                    <div class="card-footer">
+                        <button class="btn btn-success btn-sm">عمل</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- النماذج -->
+            <h3 style="margin-top: 2rem;">النماذج (Forms)</h3>
+            <div class="card" style="max-width: 500px;">
+                <form>
+                    <div class="form-group">
+                        <label class="form-label">البريد الإلكتروني</label>
+                        <input type="email" class="form-control" placeholder="أدخل بريدك الإلكتروني">
+                        <p class="form-text">سنحافظ على خصوصيتك.</p>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="form-label">الاسم</label>
+                        <input type="text" class="form-control" placeholder="أدخل اسمك الكامل">
+                    </div>
+
+                    <div class="form-group">
+                        <label class="form-label">الرسالة</label>
+                        <textarea class="form-control" placeholder="اكتب رسالتك هنا..."></textarea>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="form-label">
+                            <input type="checkbox"> أوافق على شروط الاستخدام
+                        </label>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary btn-block">إرسال الرسالة</button>
+                </form>
+            </div>
+
+            <!-- التنبيهات -->
+            <h3 style="margin-top: 2rem;">التنبيهات (Alerts)</h3>
+            <div class="alert alert-info">
+                <span class="alert-close">&times;</span>
+                <strong>معلومة:</strong> هذا هو تنبيه معلومات يوفر معلومات مهمة.
+            </div>
+            <div class="alert alert-success">
+                <span class="alert-close">&times;</span>
+                <strong>نجاح:</strong> تم إكمال العملية بنجاح!
+            </div>
+            <div class="alert alert-warning">
+                <span class="alert-close">&times;</span>
+                <strong>تحذير:</strong> يرجى التحقق من البيانات المدخلة.
+            </div>
+            <div class="alert alert-error">
+                <span class="alert-close">&times;</span>
+                <strong>خطأ:</strong> حدثت مشكلة ما. يرجى المحاولة لاحقاً.
+            </div>
+
+            <!-- الشارات -->
+            <h3 style="margin-top: 2rem;">الشارات (Badges)</h3>
+            <div style="padding: 1rem; background: rgba(3, 218, 197, 0.05); border-radius: 0.75rem; display: flex; gap: 0.5rem; flex-wrap: wrap;">
+                <span class="badge badge-primary">أساسي</span>
+                <span class="badge badge-secondary">ثانوي</span>
+                <span class="badge badge-success">نجاح</span>
+                <span class="badge badge-warning">تحذير</span>
+                <span class="badge badge-error">خطأ</span>
+            </div>
+        </section>
+
+        <!-- نظام الألوان -->
+        <section id="colors" class="demo-section">
+            <h2>🎨 نظام الألوان</h2>
+
+            <h3>ألوان Material Purple الأساسية</h3>
+            <div class="demo-grid">
+                <div class="demo-item">
+                    <div class="color-box" style="background-color: #6200ee;">
+                        #6200ee
+                    </div>
+                    <p><strong>بنفسجي أساسي</strong></p>
+                </div>
+                <div class="demo-item">
+                    <div class="color-box" style="background-color: #7b1fa2;">
+                        #7b1fa2
+                    </div>
+                    <p><strong>بنفسجي داكن</strong></p>
+                </div>
+                <div class="demo-item">
+                    <div class="color-box" style="background-color: #03dac5;">
+                        #03dac5
+                    </div>
+                    <p><strong>تركواز</strong></p>
+                </div>
+                <div class="demo-item">
+                    <div class="color-box" style="background-color: #3700b3;">
+                        #3700b3
+                    </div>
+                    <p><strong>بنفسجي متوسط</strong></p>
+                </div>
+                <div class="demo-item">
+                    <div class="color-box" style="background-color: #4caf50;">
+                        #4caf50
+                    </div>
+                    <p><strong>أخضر (نجاح)</strong></p>
+                </div>
+                <div class="demo-item">
+                    <div class="color-box" style="background-color: #ff9800;">
+                        #ff9800
+                    </div>
+                    <p><strong>برتقالي (تحذير)</strong></p>
+                </div>
+                <div class="demo-item">
+                    <div class="color-box" style="background-color: #f44336;">
+                        #f44336
+                    </div>
+                    <p><strong>أحمر (خطأ)</strong></p>
+                </div>
+                <div class="demo-item">
+                    <div class="color-box" style="background-color: #2196f3;">
+                        #2196f3
+                    </div>
+                    <p><strong>أزرق (معلومة)</strong></p>
+                </div>
+            </div>
+
+            <h3 style="margin-top: 2rem;">استخدام متغيرات CSS</h3>
+            <div class="code-block">color: var(--color-accent);
+background: var(--color-surface);
+border: 1px solid var(--color-border);</div>
+        </section>
+
+        <!-- الطباعة العربية -->
+        <section id="typography" class="demo-section">
+            <h2>📝 الطباعة العربية</h2>
+
+            <h3>مقاسات العناوين</h3>
+            <h1>عنوان 1 - 2.5rem (40px)</h1>
+            <h2>عنوان 2 - 2rem (32px)</h2>
+            <h3>عنوان 3 - 1.5rem (24px)</h3>
+            <h4>عنوان 4 - 1.25rem (20px)</h4>
+            <h5>عنوان 5 - 1.125rem (18px)</h5>
+            <h6>عنوان 6 - 1rem (16px)</h6>
+
+            <h3 style="margin-top: 2rem;">الفقرات والنصوص</h3>
+            <p>هذه فقرة عربية عادية مع محاذاة ضبط وارتفاع سطر مثالي (1.8) لسهولة القراءة. تتمتع المكتبة بدعم كامل للنصوص العربية مع معالجة خاصة للمسافات والأحرف.</p>
+
+            <p><strong>نص سميك:</strong> استخدم العلامات المناسبة لتنسيق النصوص.</p>
+            <p><em>نص مائل:</em> يمكنك إضافة تأكيد على الكلمات المهمة.</p>
+
+            <h3 style="margin-top: 2rem;">فئات النصوص</h3>
+            <div class="demo-grid">
+                <div class="demo-item">
+                    <p class="text-sm">نص صغير جداً</p>
+                </div>
+                <div class="demo-item">
+                    <p class="text-lg">نص كبير</p>
+                </div>
+                <div class="demo-item">
+                    <p class="text-xl">نص أكبر</p>
+                </div>
+                <div class="demo-item">
+                    <p class="text-bold">نص سميك جداً</p>
+                </div>
+                <div class="demo-item">
+                    <p class="text-semibold">نص نصف سميك</p>
+                </div>
+                <div class="demo-item">
+                    <p class="text-light">نص خفيف الوزن</p>
+                </div>
+                <div class="demo-item">
+                    <p class="text-success">نص أخضر</p>
+                </div>
+                <div class="demo-item">
+                    <p class="text-warning">نص برتقالي</p>
+                </div>
+                <div class="demo-item">
+                    <p class="text-error">نص أحمر</p>
+                </div>
+                <div class="demo-item">
+                    <p class="text-info">نص أزرق</p>
+                </div>
+                <div class="demo-item">
+                    <p class="text-muted">نص خافت</p>
+                </div>
+                <div class="demo-item">
+                    <p class="text-underline">نص مسطر</p>
+                </div>
+            </div>
+
+            <h3 style="margin-top: 2rem;">اللوائح والقوائم</h3>
+            <ul>
+                <li>عنصر أول في القائمة</li>
+                <li>عنصر ثاني في القائمة</li>
+                <li>عنصر ثالث في القائمة
+                    <ul>
+                        <li>عنصر فرعي أول</li>
+                        <li>عنصر فرعي ثاني</li>
+                    </ul>
+                </li>
+            </ul>
+
+            <h3 style="margin-top: 2rem;">أكواد ونصوص برمجية</h3>
+            <p>يمكنك استخدام <code>كود مدمج</code> في النصوص، أو كتل أكواد كاملة:</p>
+            <div class="code-block">
+&lt;div class="container"&gt;
+    &lt;h1&gt;مرحبا بك في EKI Styles&lt;/h1&gt;
+    &lt;button class="btn btn-primary"&gt;انقر هنا&lt;/button&gt;
+&lt;/div&gt;
+            </div>
+        </section>
+
+        <!-- الجداول -->
+        <section class="demo-section">
+            <h2>📊 الجداول</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>الاسم</th>
+                        <th>الوصف</th>
+                        <th>الاستخدام</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>btn</td>
+                        <td>فئة الأزرار الأساسية</td>
+                        <td>&lt;button class="btn"&gt;</td>
+                    </tr>
+                    <tr>
+                        <td>card</td>
+                        <td>فئة البطاقات</td>
+                        <td>&lt;div class="card"&gt;</td>
+                    </tr>
+                    <tr>
+                        <td>navbar</td>
+                        <td>شريط التنقل</td>
+                        <td>&lt;nav class="navbar"&gt;</td>
+                    </tr>
+                    <tr>
+                        <td>alert</td>
+                        <td>التنبيهات والتنويهات</td>
+                        <td>&lt;div class="alert"&gt;</td>
+                    </tr>
+                    <tr>
+                        <td>form-control</td>
+                        <td>حقول النماذج</td>
+                        <td>&lt;input class="form-control"&gt;</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <!-- الشبكات والأعمدة -->
+        <section class="demo-section">
+            <h2>📐 نظام الشبكات والأعمدة</h2>
+            <h3>أعمدة متساوية (3 أعمدة)</h3>
+            <div class="row">
+                <div class="col-4">
+                    <div style="background: rgba(3, 218, 197, 0.1); padding: 1rem; border-radius: 0.5rem; text-align: center;">عمود 1/3</div>
+                </div>
+                <div class="col-4">
+                    <div style="background: rgba(3, 218, 197, 0.1); padding: 1rem; border-radius: 0.5rem; text-align: center;">عمود 2/3</div>
+                </div>
+                <div class="col-4">
+                    <div style="background: rgba(3, 218, 197, 0.1); padding: 1rem; border-radius: 0.5rem; text-align: center;">عمود 3/3</div>
+                </div>
+            </div>
+
+            <h3 style="margin-top: 2rem;">أعمدة متساوية (2 عمود)</h3>
+            <div class="row">
+                <div class="col-6">
+                    <div style="background: rgba(98, 0, 238, 0.1); padding: 1rem; border-radius: 0.5rem; text-align: center;">عمود 1/2</div>
+                </div>
+                <div class="col-6">
+                    <div style="background: rgba(98, 0, 238, 0.1); padding: 1rem; border-radius: 0.5rem; text-align: center;">عمود 2/2</div>
+                </div>
+            </div>
+
+            <h3 style="margin-top: 2rem;">أعمدة بأحجام مختلفة</h3>
+            <div class="row">
+                <div class="col-3">
+                    <div style="background: rgba(76, 175, 80, 0.1); padding: 1rem; border-radius: 0.5rem; text-align: center;">عمود 1/4</div>
+                </div>
+                <div class="col-9">
+                    <div style="background: rgba(76, 175, 80, 0.1); padding: 1rem; border-radius: 0.5rem; text-align: center;">عمود 3/4</div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- التذييل -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>عن المكتبة</h3>
+                <ul>
+                    <li><a href="#">من نحن</a></li>
+                    <li><a href="#">المميزات</a></li>
+                    <li><a href="#">التسعير</a></li>
+                    <li><a href="#">الأمثلة</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>الدعم والمساعدة</h3>
+                <ul>
+                    <li><a href="#">مركز المساعدة</a></li>
+                    <li><a href="#">التوثيق الكامل</a></li>
+                    <li><a href="#">الأسئلة الشائعة</a></li>
+                    <li><a href="#">اتصل بنا</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>الموارد</h3>
+                <ul>
+                    <li><a href="#">GitHub</a></li>
+                    <li><a href="#">npm Package</a></li>
+                    <li><a href="#">المدونة</a></li>
+                    <li><a href="#">Twitter</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>قانوني</h3>
+                <ul>
+                    <li><a href="#">سياسة الخصوصية</a></li>
+                    <li><a href="#">شروط الاستخدام</a></li>
+                    <li><a href="#">الترخيص</a></li>
+                    <li><a href="#">الملفات</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 EKI Styles. جميع الحقوق محفوظة. | مصنوع بـ ❤️ من قبل EKISTUDIO</p>
+        </div>
+    </footer>
+
+    <script>
+        // إغلاق التنبيهات
+        document.querySelectorAll('.alert-close').forEach(closeBtn => {
+            closeBtn.addEventListener('click', function () {
+                this.parentElement.style.animation = 'fadeOut 0.3s ease-out';
+                setTimeout(() => {
+                    this.parentElement.remove();
+                }, 300);
+            });
+        });
+
+        // تفعيل روابط الشريط العلوي
+        document.querySelectorAll('.navbar-menu a').forEach(link => {
+            link.addEventListener('click', function () {
+                document.querySelectorAll('.navbar-menu a').forEach(l => l.classList.remove('active'));
+                this.classList.add('active');
+            });
+        });
+    </script>
+</body>
+
+</html>

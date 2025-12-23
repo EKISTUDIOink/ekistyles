@@ -1,0 +1,37 @@
+{
+  "name": "ekistyles",
+  "version": "1.0.0",
+  "description": "مكتبة CSS عربية متكاملة بني على Tailwind CSS مع دعم كامل للعربية و Material Purple",
+  "main": "dist/ekistyles.css",
+  "scripts": {
+    "build": "tailwindcss -i ./src/ekistyles.css -o ./dist/ekistyles.css",
+    "build:minify": "tailwindcss -i ./src/ekistyles.css -o ./dist/ekistyles.min.css --minify",
+    "watch": "tailwindcss -i ./src/ekistyles.css -o ./dist/ekistyles.css --watch",
+    "dev": "npm run build && npm run watch",
+    "production": "npm run build && npm run build:minify"
+  },
+  "keywords": [
+    "css",
+    "framework",
+    "arabic",
+    "rtl",
+    "tailwind",
+    "material-design",
+    "عربي",
+    "تصميم",
+    "واجهة"
+  ],
+  "author": "EKISTUDIO",
+  "license": "MIT",
+  "devDependencies": {
+    "tailwindcss": "^3.4.0",
+    "postcss": "^8.4.31"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/EKISTUDIOink/ekistyles.git"
+  },
+  "engines": {
+    "node": ">=14.0.0"
+  }
+}
